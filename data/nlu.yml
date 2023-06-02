@@ -1,0 +1,191 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - oi
+    - olá
+    - bom dia
+    - boa tarde
+    - boa noite
+    - bomdia
+    - boatarde
+    - boanoite
+    - ola tudo bem
+    - oi tudo bom
+- intent: goodbye
+  examples: |
+    - até mais
+    - obrigado
+    - até a próxima
+    - ate mais tarde
+    - até depois
+    - tenha um bom dia
+    - tenha um ótimo dia
+    - agradecido
+    - tchau
+- intent: affirm
+  examples: |
+    - posso
+    - sim
+    - claro
+    - isso mesmo
+    - óbvio
+    - mas é claro
+    - com certeza
+    - correto
+    - afirmativo
+    - okay
+- intent: deny
+  examples: |
+    - não
+    - nao
+    - jamais
+    - nunca
+    - acho que não
+    - de jeito nenhum
+    - não gosto disso
+    - contra
+    - rejeito
+- intent: mood_great
+  examples: |
+    - está boa
+    - excelente
+    - top
+    - muito boa
+    - muito bom
+    - bom
+    - otimo
+    - otima
+    - nao podia estar melhor
+- intent: feeling_bad
+  examples: |
+    - ruim
+    - mal
+    - mau
+    - não vai bem
+    - pessimo
+    - horrivel
+    - Estou me sentindo mal
+    - Eu não me sinto bem
+    - Eu não acho que estou legal
+    - Eu acho que estou doente
+    - Eu to muito doente
+    - Estou me sentindo mo mal
+    - To bem não
+
+- intent: bot_challenge
+  examples: |
+    - Você é Humano?
+    - Você é um bot?
+    - Você é robô?
+    - Eu estou falando com um humano?
+    - Eu estou falando com um bot?
+
+- intent: question_data
+  examples: |
+    - Quais dos meus dados o médico poderá ver?
+    - O médico vai ver meus dados?
+    - Que dados o médico consegue acessar?
+    - Quais dados o médico vai conseguir ver?
+    - Quais informações que o médico vai ter?
+    - Quais dados que o médico tem?
+    - Que informações minhas que vão ter?
+    - Quais informações que vão ser vistas?
+    - Quais médicos vão ter o acesso?
+    - Todo mundo vai ver meus dados?
+    - Quem vai ver meus dados?
+    - Que médicos vão ver meus dados?
+    - Alguém vai ver minhas informações?
+    - Que dados vão ser compartilhados?
+
+- intent: question_system
+  examples: |
+    - O que posso fazer nesse aplicativo?
+    - O que tem nesse site?
+    - Como funciona esse aplicativo?
+    - O que tem por aqui?
+    - Com o que você pode me ajudar?
+    - Quais são suas funções bot?
+    - O que você pode fazer pra mim?
+    - Qual o objetivo desse aplicativo?
+    - Qual o sentindo do chatbot?
+
+- intent: question_connection
+  examples: |
+    - Como posso me vincular a um médico?
+    - Como me conectou a um médico?
+    - Como adiciono um médico?
+    - Eu posso adicionar um médico?
+    - Quero adicionar um médico
+    - Eu precido do token do médico
+    - Que token é esse que pede?
+    - Como consigo esse token?
+    - Quero me vincular a um médico
+    - Conectar com um médico
+
+- intent: question_sysptoms
+  examples: |
+    - Que sintomas que você vai compartilhar?
+    - Onde que saiu os sintomas?
+    - Como assim sintomas?
+    - Que sintomas você está falando?
+    - Não entendi essa parte dos sintomas
+    - Me explixa como funciona esses sintomas
+
+- intent: list_symptoms
+  examples: |
+    - Dor de Cabeça, Falta de ar
+    - Dor de barriga, Febre
+
+- intent: list_illness
+  examples: |
+    - Diabete, Pneumonia, Hipertensão, Asma
+    - Pneumonia, Asma
+    - Dengue,Covid-19
+    - Pnuemonia
+    - Dengue
+
+- intent: list_allergy
+  examples: |
+    - Crustáceos, Leite
+    - Mofo, Leite
+    - Mofo, Anti-inflamatórios
+    - Dipirona
+    - Ácaro, Poeira
+    - Trigo, Peixe, Ovo
+    - Frutos do mar
+    - Amendoim, Corantes, Produtos de limpeza
+
+- intent: change_anamnese
+  examples: |
+    - Quero mudar minha anamnese
+    - Mudar minhas doenças
+    - Mudar minhas alergias
+    - Quero editar minhas doenças
+    - Ajeitar as alergias
+    - Editar todas as doenças
+
+- intent: want_medical_center
+  examples: |
+    - Quero ir para um hospital
+    - Onde tem um hospital?
+    - Preciso de um centro médico
+    - Me passa o endereço de uma clínica
+    - Quero uma clinica
+    - Tem algum centro medico por perto?
+    - Estou precisando de um hospital
+
+- intent: type_medical_center
+  examples: |
+    - SUS
+    - Hapvida
+    - Unimed
+
+- intent: intro
+  examples: |
+    - Se introduza
+    - por favor se introduza
+    - Me de uma introdução
+    - Uma introdução
+    

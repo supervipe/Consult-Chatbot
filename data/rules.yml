@@ -1,0 +1,43 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say intro
+  steps:
+  - intent: intro
+  - action: utter_intro
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: action_custom_fallback
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Questionamento sobre a vinculação com o médico
+  steps:
+  - intent: question_connection
+  - action: utter_question_connection
+
+- rule: Questionamento sobre os dados
+  steps:
+  - intent: question_data
+  - action: utter_question_data
+
+- rule: Questionamento sobre os sintomas
+  steps:
+  - intent: question_sysptoms
+  - action: utter_question_sysptoms
+
+- rule: Questionamento sobre o sistema
+  steps:
+  - intent: question_system
+  - action: utter_question_system 

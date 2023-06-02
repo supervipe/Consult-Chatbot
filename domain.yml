@@ -1,0 +1,70 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - feeling_bad
+  - bot_challenge
+  - question_data
+  - question_system
+  - question_connection
+  - question_sysptoms 
+  - list_symptoms
+  - want_medical_center
+  - type_medical_center
+  - change_anamnese
+  - list_illness
+  - list_allergy
+  - intro
+
+actions:
+  - action_select_symptoms
+  - action_suggest_center
+  - action_select_illness
+  - action_select_allergy
+  - action_save_anamnese
+  - search_medical_center
+  - action_custom_fallback
+  - types_medical_center
+  
+responses:
+  utter_greet:
+  - text: "Olá sou o Hermes, como você está?"
+
+  utter_did_that_help:
+  - text: "Isso te ajudou?"
+
+  utter_happy:
+  - text: "Show, continue!"
+
+  utter_goodbye:
+  - text: "Tchau, qualquer coisa estou aqui para te ajudar!"
+
+  utter_iamabot:
+  - text: "Eu so um o Hermes, o chatbot do Consult e estou aqui para te ajudar."
+
+  utter_want_medical_center:
+  - text: "Okay, posso aranjar alguns opções de centros médicos, mas primeiro selecione se quer um dos SUS ou de um plano de saúde específico:"
+
+  utter_please_rephrase:
+  - text: "Desculpa não consegui entender! Você poderia reformular o que falou?"
+
+  utter_question_data:
+  - text: "No Consult, os seus dados só podem ser acessados pelos médicos que são vinculados à você. Os seus dados que os médicos vão ter acesso são: nome, data de nascimento, doenças, alergias e sintomas."
+  utter_question_system:
+  - text: "O Consult foi densenvolvido para facilitar você encontrar o médico necessário para os seus sintomas e também facilitar o processo da consulta com o seu médico. \n 
+          Dentro desse sistema você pode encontrar uma lista de centros médicos perto de você e também pode editar o seu perfil para ajudar os seus médicos identificarem seu perfil. \n 
+          Além de que eu vou estar aqui para te ajudar com o que precisar."
+  utter_question_connection:
+  - text: "Na sua lista de médicos, onde você pode entrar clicando no ver mais, tem um botão com um '+' que você pode colocar o token que o médico precisa te dizer para acontecer sua vinculação à ele."
+  utter_question_sysptoms:
+  - text: "Se você estiver se sentindo mal e querer ir para um centro médico, você pode me informar os seus sintomas e depois vou lhe informar algumas opções de centros médicos para você ir ou marcar um consulta."
+
+  utter_intro:
+  - text: "Bem vindo ao Consult, meu nome é Hermes e posso lhe ajudar nas suas próximas consultas guardando informações, listando centros médicos próximos à você, atualizando seu perfil, entre outras coisas. Estou aqui por você!😄"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

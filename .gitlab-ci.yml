@@ -1,0 +1,21 @@
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker build -t my-chatbot-app .
+    - docker run --name my-chatbot-container -d my-chatbot-app
+
+test:
+  stage: test
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker build -t rasa-test-app -f Dockerfile.tests .
+    - docker run --name my-test-app-container rasa-test-app

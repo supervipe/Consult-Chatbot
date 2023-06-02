@@ -1,0 +1,57 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: happy path 
+  steps:
+  - user: |
+      oi
+    intent: greet
+  - action: utter_greet
+  - user: |
+      excelente
+    intent: mood_great
+  - action: utter_happy
+
+- story: Questionamento sobre o sistema
+  steps:
+  - user: |
+      Ola
+    intent: greet
+  - action: utter_greet
+  - user: |
+      Como funciona esse aplicativo?
+    intent: question_system
+  - action: utter_question_system
+
+- story: Solicitar um centro medico e estar doente
+  steps:
+  - user: |
+      Quero ir para um hospital
+    intent: want_medical_center
+  - action: types_medical_center
+  - user: |
+      Unimed
+    intent: type_medical_center
+  - action: search_medical_center
+  - action: utter_did_that_help
+  - user: |
+      Sim, estou doente
+    intent: affirm
+  - action: action_select_symptoms
+
+- story: Solicitar um centro medico e estar okay
+  steps:
+  - user: |
+      Quero ir para um hospital
+    intent: want_medical_center
+  - action: types_medical_center
+  - user: |
+      Unimed
+    intent: type_medical_center
+  - action: search_medical_center
+  - action: utter_did_that_help
+  - user: |
+      Não
+    intent: deny
+  - action: utter_goodbye

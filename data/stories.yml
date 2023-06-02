@@ -1,0 +1,74 @@
+version: "3.1"
+
+stories:
+
+
+- story: grettings
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: Selecionar doenças e alergias
+  steps:
+  - intent: change_anamnese
+  - action: action_select_illness
+  - intent: list_illness
+  - action: action_select_allergy
+  - intent: list_allergy
+  - action: action_save_anamnese
+  - action: utter_question_system
+
+- story: Estar doente e indicar hospital
+  steps:
+  - intent: feeling_bad
+  - action: action_select_symptoms
+  - intent: list_symptoms
+  - action: action_suggest_center
+  - action: utter_goodbye
+
+- story: Questionamento sobre a vinculação com o médico
+  steps:
+  - intent: question_connection
+  - action: utter_question_connection
+
+- story: Questionamento sobre os dados
+  steps:
+  - intent: question_data
+  - action: utter_question_data
+  - intent: question_sysptoms
+  - action: utter_question_sysptoms
+
+- story: Questionamento sobre o sistema
+  steps:
+  - intent: question_system
+  - action: utter_question_system
+
+- story: Solicitar um centro medico
+  steps:
+  - intent: want_medical_center
+  - action: types_medical_center
+  - intent: type_medical_center
+  - action: search_medical_center
+  - checkpoint: flow_feeling
+
+- story: Fluxo de estar doente
+  steps:
+  - checkpoint: flow_feeling
+  - intent: affirm
+  - action: action_select_symptoms
+  - intent: list_symptoms
+  - action: action_suggest_center
+  - action: utter_goodbye
+
+- story: Fluxo de estar okay
+  steps:
+  - checkpoint: flow_feeling
+  - intent: deny
+  - action: utter_goodbye
